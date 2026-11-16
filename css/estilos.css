@@ -227,3 +227,7 @@ input[type="date"] { color-scheme: dark; }
 .leaflet-bar a { background: var(--superficie-2); color: var(--tinta); border-bottom-color: var(--linea); }
 .leaflet-bar a:hover { background: var(--linea); color: #fff; }
 .leaflet-bar { border: 1px solid var(--linea) !important; }
+
+/* Mapa oscuro sin servicios pagos: se invierten los colores del mapa común y se ajusta el tono
+   (hue-rotate devuelve el agua a azul y los parques a verde después de invertir) */
+.capa-oscura { filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%) saturate(70%); }

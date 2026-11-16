@@ -27,9 +27,10 @@ const plural = (n, palabra, plural_ = `${palabra}s`) => `${n} ${n === 1 ? palabr
 // Mapas base. Todos usan datos de OpenStreetMap; cambia el estilo con que se dibujan.
 const OSM = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 const MAPAS_BASE = {
-  // Oscuro: combina con la identidad visual de TodoEnBici
-  Oscuro: () => L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    maxZoom: 19, subdomains: 'abcd', attribution: `${OSM} · © <a href="https://carto.com/attributions">CARTO</a>`,
+  // Oscuro: el mapa común de OpenStreetMap con un filtro de color que lo oscurece (ver .capa-oscura en el CSS).
+  // No necesita clave: CARTO, que ofrecía un mapa oscuro listo, ahora la pide.
+  Oscuro: () => L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19, attribution: OSM, className: 'capa-oscura',
   }),
   // CyclOSM: estilo pensado para bicicletas, resalta ciclovías y bicisendas
   Ciclovías: () => L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
