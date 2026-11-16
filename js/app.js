@@ -27,11 +27,6 @@ const plural = (n, palabra, plural_ = `${palabra}s`) => `${n} ${n === 1 ? palabr
 // Mapas base. Todos usan datos de OpenStreetMap; cambia el estilo con que se dibujan.
 const OSM = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 const MAPAS_BASE = {
-  // Oscuro: el mapa común de OpenStreetMap con un filtro de color que lo oscurece (ver .capa-oscura en el CSS).
-  // No necesita clave: CARTO, que ofrecía un mapa oscuro listo, ahora la pide.
-  Oscuro: () => L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19, attribution: OSM, className: 'capa-oscura',
-  }),
   // CyclOSM: estilo pensado para bicicletas, resalta ciclovías y bicisendas
   Ciclovías: () => L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
     maxZoom: 19, subdomains: 'abc', attribution: `${OSM} · Estilo <a href="https://www.cyclosm.org">CyclOSM</a>`,
@@ -40,7 +35,7 @@ const MAPAS_BASE = {
 };
 
 /** Crea un mapa con un mapa base inicial y un selector para cambiarlo. */
-function crearMapa(id, { base = 'Oscuro', selector = true, ...opciones } = {}) {
+function crearMapa(id, { base = 'Calles', selector = true, ...opciones } = {}) {
   const m = L.map(id, { zoomControl: true, scrollWheelZoom: false, ...opciones }).setView(CENTRO_CABA, 12);
   // Leaflet muestra por defecto una banderita junto a su nombre: dejamos solo el crédito, que es lo que pide su licencia
   m.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
