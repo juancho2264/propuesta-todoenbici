@@ -1,0 +1,435 @@
+{
+ "aviso": "DATOS DE EJEMPLO, INVENTADOS PARA UNA PROPUESTA. No son denuncias reales.",
+ "denuncias": [
+  {
+   "id": 1,
+   "tipo": "intento",
+   "barrio": "Palermo",
+   "lat": -34.58139,
+   "lng": -58.42081,
+   "haceDias": 10,
+   "franja": "Mañana",
+   "detalle": "Intentaron frenarme, pude escapar"
+  },
+  {
+   "id": 2,
+   "tipo": "robo_arma",
+   "barrio": "Palermo",
+   "lat": -34.58076,
+   "lng": -58.42128,
+   "haceDias": 4,
+   "franja": "Mañana",
+   "detalle": "Me interceptaron dos personas en moto"
+  },
+  {
+   "id": 3,
+   "tipo": "robo",
+   "barrio": "Palermo",
+   "lat": -34.58083,
+   "lng": -58.42118,
+   "haceDias": 12,
+   "franja": "Tarde",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 4,
+   "tipo": "intento",
+   "barrio": "Palermo",
+   "lat": -34.58123,
+   "lng": -58.42112,
+   "haceDias": 20,
+   "franja": "Mañana",
+   "detalle": "Me siguieron varias cuadras"
+  },
+  {
+   "id": 5,
+   "tipo": "intento",
+   "barrio": "Palermo",
+   "lat": -34.58099,
+   "lng": -58.42121,
+   "haceDias": 1,
+   "franja": "Tarde",
+   "detalle": "Me siguieron varias cuadras"
+  },
+  {
+   "id": 6,
+   "tipo": "robo_arma",
+   "barrio": "Caballito",
+   "lat": -34.61795,
+   "lng": -58.43911,
+   "haceDias": 2,
+   "franja": "Tarde",
+   "detalle": "Me sacaron la bici a punta de arma"
+  },
+  {
+   "id": 7,
+   "tipo": "robo",
+   "barrio": "Caballito",
+   "lat": -34.61808,
+   "lng": -58.43871,
+   "haceDias": 26,
+   "franja": "Tarde",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 8,
+   "tipo": "robo_arma",
+   "barrio": "Caballito",
+   "lat": -34.61797,
+   "lng": -58.43891,
+   "haceDias": 17,
+   "franja": "Tarde",
+   "detalle": "Me sacaron la bici a punta de arma"
+  },
+  {
+   "id": 9,
+   "tipo": "robo",
+   "barrio": "Caballito",
+   "lat": -34.61769,
+   "lng": -58.43932,
+   "haceDias": 3,
+   "franja": "Tarde",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 10,
+   "tipo": "robo_arma",
+   "barrio": "Almagro",
+   "lat": -34.60982,
+   "lng": -58.41966,
+   "haceDias": 11,
+   "franja": "Tarde",
+   "detalle": "Me sacaron la bici a punta de arma"
+  },
+  {
+   "id": 11,
+   "tipo": "robo_arma",
+   "barrio": "Almagro",
+   "lat": -34.60997,
+   "lng": -58.42,
+   "haceDias": 18,
+   "franja": "Mañana",
+   "detalle": "Me amenazaron en el semáforo"
+  },
+  {
+   "id": 12,
+   "tipo": "robo",
+   "barrio": "Almagro",
+   "lat": -34.60974,
+   "lng": -58.42015,
+   "haceDias": 1,
+   "franja": "Tarde",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  },
+  {
+   "id": 13,
+   "tipo": "intento",
+   "barrio": "Flores",
+   "lat": -34.62879,
+   "lng": -58.46273,
+   "haceDias": 16,
+   "franja": "Tarde",
+   "detalle": "Intentaron frenarme, pude escapar"
+  },
+  {
+   "id": 14,
+   "tipo": "robo_arma",
+   "barrio": "Flores",
+   "lat": -34.62901,
+   "lng": -58.4631,
+   "haceDias": 6,
+   "franja": "Noche",
+   "detalle": "Me interceptaron dos personas en moto"
+  },
+  {
+   "id": 15,
+   "tipo": "robo_arma",
+   "barrio": "Flores",
+   "lat": -34.62937,
+   "lng": -58.46268,
+   "haceDias": 1,
+   "franja": "Mañana",
+   "detalle": "Me amenazaron en el semáforo"
+  },
+  {
+   "id": 16,
+   "tipo": "robo",
+   "barrio": "Flores",
+   "lat": -34.6287,
+   "lng": -58.463,
+   "haceDias": 2,
+   "franja": "Mañana",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  },
+  {
+   "id": 17,
+   "tipo": "intento",
+   "barrio": "Balvanera",
+   "lat": -34.60844,
+   "lng": -58.40403,
+   "haceDias": 13,
+   "franja": "Tarde",
+   "detalle": "Quisieron cortar el candado"
+  },
+  {
+   "id": 18,
+   "tipo": "intento",
+   "barrio": "Balvanera",
+   "lat": -34.60836,
+   "lng": -58.40391,
+   "haceDias": 13,
+   "franja": "Tarde",
+   "detalle": "Quisieron cortar el candado"
+  },
+  {
+   "id": 19,
+   "tipo": "intento",
+   "barrio": "Balvanera",
+   "lat": -34.60855,
+   "lng": -58.40436,
+   "haceDias": 2,
+   "franja": "Noche",
+   "detalle": "Me siguieron varias cuadras"
+  },
+  {
+   "id": 20,
+   "tipo": "robo",
+   "barrio": "Palermo",
+   "lat": -34.58944,
+   "lng": -58.42224,
+   "haceDias": 49,
+   "franja": "Mañana",
+   "detalle": "Me empujaron y se llevaron la bici"
+  },
+  {
+   "id": 21,
+   "tipo": "intento",
+   "barrio": "Palermo",
+   "lat": -34.5789,
+   "lng": -58.41364,
+   "haceDias": 0,
+   "franja": "Mañana",
+   "detalle": "Me siguieron varias cuadras"
+  },
+  {
+   "id": 22,
+   "tipo": "robo",
+   "barrio": "Belgrano",
+   "lat": -34.56247,
+   "lng": -58.46145,
+   "haceDias": 31,
+   "franja": "Noche",
+   "detalle": "Me empujaron y se llevaron la bici"
+  },
+  {
+   "id": 23,
+   "tipo": "robo",
+   "barrio": "Recoleta",
+   "lat": -34.59695,
+   "lng": -58.3996,
+   "haceDias": 28,
+   "franja": "Tarde",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 24,
+   "tipo": "intento",
+   "barrio": "Recoleta",
+   "lat": -34.58545,
+   "lng": -58.3969,
+   "haceDias": 13,
+   "franja": "Noche",
+   "detalle": "Quisieron cortar el candado"
+  },
+  {
+   "id": 25,
+   "tipo": "robo",
+   "barrio": "Almagro",
+   "lat": -34.60291,
+   "lng": -58.42668,
+   "haceDias": 12,
+   "franja": "Tarde",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  },
+  {
+   "id": 26,
+   "tipo": "robo",
+   "barrio": "Almagro",
+   "lat": -34.60795,
+   "lng": -58.41789,
+   "haceDias": 73,
+   "franja": "Mañana",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  },
+  {
+   "id": 27,
+   "tipo": "robo_arma",
+   "barrio": "Caballito",
+   "lat": -34.61291,
+   "lng": -58.4452,
+   "haceDias": 59,
+   "franja": "Mañana",
+   "detalle": "Me sacaron la bici a punta de arma"
+  },
+  {
+   "id": 28,
+   "tipo": "robo_arma",
+   "barrio": "Caballito",
+   "lat": -34.6172,
+   "lng": -58.43689,
+   "haceDias": 41,
+   "franja": "Tarde",
+   "detalle": "Me amenazaron en el semáforo"
+  },
+  {
+   "id": 29,
+   "tipo": "robo_arma",
+   "barrio": "Caballito",
+   "lat": -34.61697,
+   "lng": -58.43863,
+   "haceDias": 14,
+   "franja": "Noche",
+   "detalle": "Me sacaron la bici a punta de arma"
+  },
+  {
+   "id": 30,
+   "tipo": "robo",
+   "barrio": "Villa Crespo",
+   "lat": -34.59305,
+   "lng": -58.43666,
+   "haceDias": 43,
+   "franja": "Tarde",
+   "detalle": "Me empujaron y se llevaron la bici"
+  },
+  {
+   "id": 31,
+   "tipo": "intento",
+   "barrio": "Villa Crespo",
+   "lat": -34.59608,
+   "lng": -58.44166,
+   "haceDias": 34,
+   "franja": "Tarde",
+   "detalle": "Intentaron frenarme, pude escapar"
+  },
+  {
+   "id": 32,
+   "tipo": "robo",
+   "barrio": "San Telmo",
+   "lat": -34.62714,
+   "lng": -58.37371,
+   "haceDias": 74,
+   "franja": "Mañana",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 33,
+   "tipo": "robo_arma",
+   "barrio": "San Telmo",
+   "lat": -34.62597,
+   "lng": -58.36869,
+   "haceDias": 9,
+   "franja": "Noche",
+   "detalle": "Me amenazaron en el semáforo"
+  },
+  {
+   "id": 34,
+   "tipo": "robo_arma",
+   "barrio": "Flores",
+   "lat": -34.62198,
+   "lng": -58.4662,
+   "haceDias": 78,
+   "franja": "Mañana",
+   "detalle": "Me amenazaron en el semáforo"
+  },
+  {
+   "id": 35,
+   "tipo": "robo",
+   "barrio": "Flores",
+   "lat": -34.63044,
+   "lng": -58.45621,
+   "haceDias": 47,
+   "franja": "Noche",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 36,
+   "tipo": "robo",
+   "barrio": "Flores",
+   "lat": -34.62938,
+   "lng": -58.46348,
+   "haceDias": 59,
+   "franja": "Tarde",
+   "detalle": "Me empujaron y se llevaron la bici"
+  },
+  {
+   "id": 37,
+   "tipo": "robo",
+   "barrio": "Núñez",
+   "lat": -34.54738,
+   "lng": -58.45635,
+   "haceDias": 31,
+   "franja": "Noche",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 38,
+   "tipo": "robo",
+   "barrio": "Colegiales",
+   "lat": -34.56732,
+   "lng": -58.45396,
+   "haceDias": 74,
+   "franja": "Mañana",
+   "detalle": "Me empujaron y se llevaron la bici"
+  },
+  {
+   "id": 39,
+   "tipo": "robo",
+   "barrio": "Colegiales",
+   "lat": -34.57549,
+   "lng": -58.45095,
+   "haceDias": 59,
+   "franja": "Noche",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  },
+  {
+   "id": 40,
+   "tipo": "robo",
+   "barrio": "Balvanera",
+   "lat": -34.60954,
+   "lng": -58.40046,
+   "haceDias": 64,
+   "franja": "Mañana",
+   "detalle": "Me arrebataron la bici en la ciclovía"
+  },
+  {
+   "id": 41,
+   "tipo": "robo",
+   "barrio": "Balvanera",
+   "lat": -34.61187,
+   "lng": -58.39659,
+   "haceDias": 42,
+   "franja": "Noche",
+   "detalle": "Me empujaron y se llevaron la bici"
+  },
+  {
+   "id": 42,
+   "tipo": "robo",
+   "barrio": "Boedo",
+   "lat": -34.63516,
+   "lng": -58.42204,
+   "haceDias": 70,
+   "franja": "Noche",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  },
+  {
+   "id": 43,
+   "tipo": "robo",
+   "barrio": "Boedo",
+   "lat": -34.62648,
+   "lng": -58.41372,
+   "haceDias": 41,
+   "franja": "Tarde",
+   "detalle": "Me robaron la bici atada afuera de un local"
+  }
+ ]
+}

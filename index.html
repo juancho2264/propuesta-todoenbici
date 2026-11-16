@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta de rediseño · TodoEnBici</title>
+  <meta name="description" content="Maqueta de propuesta: mapa de alertas para ciclistas con denuncias por formulario y zonas peligrosas automáticas.">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="vendor/leaflet/leaflet.js" defer></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <!-- Transparencia: que nadie confunda esta maqueta con el sitio oficial -->
+  <div class="aviso-propuesta" role="note">
+    <strong>Propuesta de rediseño para TodoEnBici</strong> · No es el sitio oficial · Las denuncias del mapa son <strong>datos de ejemplo inventados</strong>
+  </div>
+
+  <header class="cabecera">
+    <a class="marca" href="#inicio">TodoEn<span>Bici</span></a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#mapa">Mapa de alertas</a>
+      <a href="#secciones">Rutas y travesías</a>
+      <a href="#secciones">Eventos</a>
+    </nav>
+    <button type="button" class="boton boton--chico" data-abrir-denuncia>Denunciar un robo</button>
+  </header>
+
+  <main id="inicio">
+    <section class="portada">
+      <div class="portada__texto">
+        <p class="etiqueta">Comunidad ciclista · 15 años en la red</p>
+        <h1>Pedaleá informado. <em>Alertas de seguridad hechas por ciclistas.</em></h1>
+        <p class="portada__bajada">
+          Mirá dónde hubo robos en los últimos días, elegí rutas más seguras y avisale a la comunidad si te pasó algo.
+        </p>
+        <div class="portada__acciones">
+          <button type="button" class="boton" data-abrir-denuncia>Denunciar un robo</button>
+          <a class="boton boton--borde" href="#mapa">Ver el mapa</a>
+        </div>
+      </div>
+      <ul class="cifras" aria-label="Resumen">
+        <li><strong id="cifra-30">–</strong><span>denuncias en los últimos 30 días</span></li>
+        <li><strong id="cifra-zonas">–</strong><span>zonas peligrosas activas</span></li>
+        <li><strong>25 mil</strong><span>seguidores en Facebook</span></li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="mapa">
+      <div class="seccion__cabecera">
+        <h2>Mapa de alertas</h2>
+        <p>Cada punto es una denuncia aproximada (nunca la dirección exacta). Con <strong>3 o más denuncias a menos de 150 m</strong>, la zona se marca como peligrosa.</p>
+      </div>
+
+      <form class="filtros" id="filtros" aria-label="Filtrar el mapa">
+        <label>Barrio
+          <select name="barrio"><option value="">Todos</option></select>
+        </label>
+        <label>Tipo
+          <select name="tipo">
+            <option value="">Todos</option>
+            <option value="robo_arma">Robo con arma</option>
+            <option value="robo">Robo sin arma</option>
+            <option value="intento">Intento de robo</option>
+          </select>
+        </label>
+        <label>Período
+          <select name="dias">
+            <option value="7">Últimos 7 días</option>
+            <option value="30" selected>Últimos 30 días</option>
+            <option value="90">Últimos 90 días</option>
+          </select>
+        </label>
+      </form>
+
+      <div class="mapa-layout">
+        <div class="mapa" id="mapa-principal" role="region" aria-label="Mapa de denuncias"></div>
+        <aside class="alertas">
+          <h3>Últimas alertas</h3>
+          <ol class="alertas__lista" id="lista-alertas" aria-live="polite"></ol>
+        </aside>
+      </div>
+
+      <ul class="referencias" aria-label="Referencias del mapa">
+        <li><span class="ref ref--zona"></span>Zona peligrosa (3 o más denuncias)</li>
+        <li><span class="ref ref--aislado"></span>Hecho aislado</li>
+        <li><span class="ref ref--pendiente"></span>Tu denuncia, pendiente de revisión</li>
+      </ul>
+    </section>
+
+    <section class="seccion" id="como-funciona">
+      <div class="seccion__cabecera">
+        <h2>Cómo funcionaría</h2>
+        <p>El cambio principal de la propuesta: que las denuncias lleguen al mapa sin cargarlas a mano.</p>
+      </div>
+      <ol class="pasos">
+        <li><strong>El ciclista denuncia</strong> desde la web, en un minuto y desde el celular. El WhatsApp sigue disponible.</li>
+        <li><strong>La denuncia llega a una planilla</strong> de Google Sheets que maneja el equipo de TodoEnBici.</li>
+        <li><strong>El equipo la revisa</strong> y la aprueba con un clic. Nada se publica sin moderación.</li>
+        <li><strong>Aparece sola en el mapa</strong>, y si hay 3 o más en la zona, se marca como peligrosa automáticamente.</li>
+      </ol>
+    </section>
+
+    <section class="seccion" id="secciones">
+      <div class="seccion__cabecera">
+        <h2>Todo en un solo lugar</h2>
+        <p>Secciones para lo que hoy está repartido en redes.</p>
+      </div>
+      <div class="tarjetas">
+        <article class="tarjeta"><h3>🛣️ Rutas seguras</h3><p>Recorridos recomendados por la comunidad, con ciclovías y zonas a evitar.</p></article>
+        <article class="tarjeta"><h3>🏕️ Travesías</h3><p>Crónicas, fotos y mapas de los viajes en bici.</p></article>
+        <article class="tarjeta"><h3>📅 Eventos</h3><p>Salidas grupales y bicicleteadas, con fecha y punto de encuentro.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Maqueta de propuesta hecha por <a href="https://juancho2264.github.io/Portafolio/" target="_blank" rel="noopener">Juan Cruz Ferrandini</a>. No es el sitio oficial de TodoEnBici. Datos de ejemplo.</p>
+    <p class="pie__creditos">Mapa: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · Leaflet</p>
+  </footer>
+
+  <!-- Formulario de denuncia -->
+  <dialog class="dialogo" id="dialogo-denuncia" aria-labelledby="titulo-denuncia">
+    <form method="dialog" class="denuncia" id="form-denuncia" novalidate>
+      <div class="denuncia__cabecera">
+        <h2 id="titulo-denuncia">Denunciar un robo</h2>
+        <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+      </div>
+      <p class="denuncia__nota">Es anónimo. Mostramos solo la zona aproximada, nunca el lugar exacto.</p>
+
+      <label>¿Qué pasó?
+        <select name="tipo" required>
+          <option value="">Elegí una opción</option>
+          <option value="robo_arma">Robo con arma</option>
+          <option value="robo">Robo sin arma</option>
+          <option value="intento">Intento de robo</option>
+        </select>
+      </label>
+      <div class="denuncia__fila">
+        <label>¿Cuándo?
+          <input type="date" name="fecha" required>
+        </label>
+        <label>Franja horaria
+          <select name="franja">
+            <option>Mañana</option><option>Tarde</option><option>Noche</option>
+          </select>
+        </label>
+      </div>
+      <label>Barrio
+        <select name="barrio" required><option value="">Elegí el barrio</option></select>
+      </label>
+      <div>
+        <span class="campo-titulo">¿Dónde fue? Tocá el mapa</span>
+        <div class="mini-mapa" id="mini-mapa" role="region" aria-label="Elegí la ubicación"></div>
+      </div>
+      <label>Contanos brevemente (opcional)
+        <textarea name="detalle" rows="2" maxlength="280" placeholder="Ej.: me interceptaron dos personas en moto"></textarea>
+      </label>
+      <p class="denuncia__error" id="error-denuncia" role="alert"></p>
+      <button type="submit" class="boton">Enviar denuncia</button>
+    </form>
+
+    <div class="enviada" id="denuncia-enviada" hidden>
+      <h2>¡Gracias por avisar! 🚲</h2>
+      <p>Así seguiría tu denuncia en la versión real:</p>
+      <ol class="pasos pasos--chico">
+        <li>Se guarda en la planilla del equipo de TodoEnBici.</li>
+        <li>El equipo la revisa (para evitar denuncias falsas).</li>
+        <li>Aparece en el mapa para toda la comunidad.</li>
+      </ol>
+      <p class="denuncia__nota">En esta maqueta no se envía nada: la ves en el mapa como <strong>pendiente de revisión</strong>, solo en tu pantalla.</p>
+      <button type="button" class="boton" data-cerrar>Ver en el mapa</button>
+    </div>
+  </dialog>
+</body>
+</html>
