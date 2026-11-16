@@ -24,12 +24,28 @@ const plural = (n, palabra, plural_ = `${palabra}s`) => `${n} ${n === 1 ? palabr
 
 // ---------- Mapa principal ----------
 
-function crearMapa(id, opciones = {}) {
+// Mapas base. Todos usan datos de OpenStreetMap; cambia el estilo con que se dibujan.
+const OSM = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+const MAPAS_BASE = {
+  // Oscuro: combina con la identidad visual de TodoEnBici
+  Oscuro: () => L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19, subdomains: 'abcd', attribution: `${OSM} · © <a href="https://carto.com/attributions">CARTO</a>`,
+  }),
+  // CyclOSM: estilo pensado para bicicletas, resalta ciclovías y bicisendas
+  Ciclovías: () => L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+    maxZoom: 19, subdomains: 'abc', attribution: `${OSM} · Estilo <a href="https://www.cyclosm.org">CyclOSM</a>`,
+  }),
+  Calles: () => L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: OSM }),
+};
+
+/** Crea un mapa con un mapa base inicial y un selector para cambiarlo. */
+function crearMapa(id, { base = 'Oscuro', selector = true, ...opciones } = {}) {
   const m = L.map(id, { zoomControl: true, scrollWheelZoom: false, ...opciones }).setView(CENTRO_CABA, 12);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-  }).addTo(m);
+  // Leaflet muestra por defecto una banderita junto a su nombre: dejamos solo el crédito, que es lo que pide su licencia
+  m.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  const capas = Object.fromEntries(Object.entries(MAPAS_BASE).map(([nombre, crear]) => [nombre, crear()]));
+  capas[base].addTo(m);
+  if (selector) L.control.layers(capas, null, { position: 'topright' }).addTo(m);
   return m;
 }
 
@@ -145,7 +161,7 @@ function iniciarDenuncia(barrios) {
     dialogo.showModal();
     // El mini mapa se crea recién cuando el diálogo es visible (Leaflet necesita saber el tamaño)
     if (!miniMapa) {
-      miniMapa = crearMapa('mini-mapa', { scrollWheelZoom: true });
+      miniMapa = crearMapa('mini-mapa', { scrollWheelZoom: true, selector: false, base: 'Calles' });
       miniMapa.on('click', (e) => {
         error.textContent = '';
         if (marcadorElegido) marcadorElegido.setLatLng(e.latlng);
@@ -202,6 +218,7 @@ async function iniciar() {
 
   mapa = crearMapa('mapa-principal');
   capa = L.layerGroup().addTo(mapa);
+  crearMapa('mapa-ciclovias', { base: 'Ciclovías' });
   iniciarFiltros(barrios);
   iniciarDenuncia(barrios);
   dibujarMapa();

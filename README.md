@@ -6,7 +6,9 @@ Idea: que las denuncias de robos lleguen al mapa **sin cargarlas a mano**, con m
 
 ## Qué muestra la maqueta
 
-- **Mapa de alertas** (Leaflet + OpenStreetMap) con filtros por barrio, tipo y período.
+- **Mapa de alertas** (Leaflet + OpenStreetMap) con filtros por barrio, tipo y período, y selector de mapa base (oscuro, ciclovías, calles).
+- **Red de ciclovías** con el estilo CyclOSM, que resalta ciclovías y bicisendas.
+- **Estilo oscuro con el atardecer naranja y rojo** de la identidad de TodoEnBici, actualizado.
 - **Zonas peligrosas automáticas:** con 3 o más denuncias a menos de 150 m, la zona se marca sola (la misma regla que hoy se aplica a mano).
 - **Lista de últimas alertas:** tocar una lleva el mapa a esa zona.
 - **Formulario de denuncia** con ubicación en el mapa. En la maqueta no envía nada: muestra la denuncia como "pendiente de revisión" solo en tu pantalla.

@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0d0a09">
   <title>Propuesta de rediseño · TodoEnBici</title>
   <meta name="description" content="Maqueta de propuesta: mapa de alertas para ciclistas con denuncias por formulario y zonas peligrosas automáticas.">
   <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <link rel="stylesheet" href="css/estilos.css">
   <script src="vendor/leaflet/leaflet.js" defer></script>
@@ -21,6 +25,7 @@
     <a class="marca" href="#inicio">TodoEn<span>Bici</span></a>
     <nav class="menu" aria-label="Secciones">
       <a href="#mapa">Mapa de alertas</a>
+      <a href="#ciclovias">Ciclovías</a>
       <a href="#secciones">Rutas y travesías</a>
       <a href="#secciones">Eventos</a>
     </nav>
@@ -30,14 +35,15 @@
   <main id="inicio">
     <section class="portada">
       <div class="portada__texto">
-        <p class="etiqueta">Comunidad ciclista · 15 años en la red</p>
+        <p class="etiqueta">Alertas de seguridad · Rutas seguras · Travesías · Eventos</p>
+        <span class="sello">15 años en la red</span>
         <h1>Pedaleá informado. <em>Alertas de seguridad hechas por ciclistas.</em></h1>
         <p class="portada__bajada">
           Mirá dónde hubo robos en los últimos días, elegí rutas más seguras y avisale a la comunidad si te pasó algo.
         </p>
         <div class="portada__acciones">
           <button type="button" class="boton" data-abrir-denuncia>Denunciar un robo</button>
-          <a class="boton boton--borde" href="#mapa">Ver el mapa</a>
+          <a class="boton boton--borde" href="#mapa">Ver el mapa de alertas</a>
         </div>
       </div>
       <ul class="cifras" aria-label="Resumen">
@@ -89,6 +95,15 @@
       </ul>
     </section>
 
+    <section class="seccion" id="ciclovias">
+      <div class="seccion__cabecera">
+        <h2>Red de ciclovías</h2>
+        <p>Las ciclovías y bicisendas de la ciudad, resaltadas para planear el recorrido. Se puede cambiar el estilo del mapa con el botón de arriba a la derecha.</p>
+      </div>
+      <div class="mapa mapa--ciclovias" id="mapa-ciclovias" role="region" aria-label="Mapa de la red de ciclovías"></div>
+      <p class="nota-mapa">Estilo <a href="https://www.cyclosm.org" target="_blank" rel="noopener">CyclOSM</a> sobre datos de OpenStreetMap. En la versión final se pueden usar los datos oficiales de ciclovías de la Ciudad y sumar las rutas seguras recomendadas por la comunidad.</p>
+    </section>
+
     <section class="seccion" id="como-funciona">
       <div class="seccion__cabecera">
         <h2>Cómo funcionaría</h2>
@@ -117,7 +132,7 @@
 
   <footer class="pie">
     <p>Maqueta de propuesta hecha por <a href="https://juancho2264.github.io/Portafolio/" target="_blank" rel="noopener">Juan Cruz Ferrandini</a>. No es el sitio oficial de TodoEnBici. Datos de ejemplo.</p>
-    <p class="pie__creditos">Mapa: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · Leaflet</p>
+    <p class="pie__creditos">Mapas: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · CARTO · CyclOSM · Leaflet</p>
   </footer>
 
   <!-- Formulario de denuncia -->
