@@ -34,4 +34,4 @@ Se lanzaría **en paralelo** al mapa actual, importando sus datos históricos, p
 
 ---
 
-Hecho por [Juan Cruz Ferrandini](https://juancho2264.github.io/Portafolio/).
+Hecho por [Juan Cruz Ferrandini](https://juancruzferrandini.com.ar).
